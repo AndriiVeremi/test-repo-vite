@@ -1,7 +1,8 @@
 import { getBodyPartsList, getFilteredList, getExercises } from './js/api';
 import { markupCategories } from './js/markupCategories';
+import { markupExercises } from './js/markupExercises';
 
-let currentPage = 1
+let currentPage = 1;
 
 const items = document.querySelector('.cards');
 const filter = document.querySelector('.filter-list');
@@ -38,16 +39,16 @@ function handlerClickCategory(e) {
 }
 
 function handlerClickExercises(e) {
-    console.log(e.target);
-    const asd = e.target;
+  console.log(e.target);
+  const asd = e.target;
 
-     getExercises(asd, currentPage)
-       .then(response => {
-         const data = response.results;
-         console.log(data);
-         
-       })
-       .catch(err => {
-         console.error(err);
-       });
+  getExercises(asd, currentPage)
+    .then(response => {
+      const data = response.results;
+      console.log(data);
+      items.innerHTML = markupExercises(data);
+    })
+    .catch(err => {
+      console.error(err);
+    });
 }
