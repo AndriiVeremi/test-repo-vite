@@ -23,3 +23,26 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+/* ---------------------------------------------------- */
+
+.cards {
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+ 
+}
+
+.cat-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  border: none;
+}
+
+.name-category,
+.name-exercises {
+  color: #fff;
+}
