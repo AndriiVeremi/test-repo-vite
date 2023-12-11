@@ -25,30 +25,6 @@ export const getBodyPartsList = async (page = 1) => {
   return response.data;
 };
 
-
-export const getMusclesList = async (page = 1) => {
-  const response = await api.get('/filters', {
-    params: {
-      filter: 'Muscles',
-      page,
-      limit: DEFAULT_FILTER_LIMIT,
-    },
-  });
-  return response.data;
-};
-
-export const getEquipmentList = async (page = 1) => {
-  const response = await api.get('/filters', {
-    params: {
-      filter: 'Equipment',
-      page,
-      limit: DEFAULT_FILTER_LIMIT,
-    },
-  });
-  return response.data;
-};
-
-
 export const getFilteredList = async (filter, page = 1) => {
   const response = await api.get('/filters', {
     params: {
