@@ -40,9 +40,9 @@ function handlerClickCategory(e) {
 
 function handlerClickExercises(e) {
   console.log(e.target);
-  const asd = e.target;
+  const target = e.target;
 
-  getExercises(asd, currentPage)
+  getExercises(target, currentPage)
     .then(response => {
       const data = response.results;
       console.log(data);
